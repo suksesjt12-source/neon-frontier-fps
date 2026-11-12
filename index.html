@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#07111f" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Neon Frontier — Drone Training</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/app-icon.svg" />
+  </head>
+  <body>
+    <main id="game-shell">
+      <div id="game-root"></div>
+
+      <div id="hud" class="hidden">
+        <div class="hud-top">
+          <div class="hud-brand"><span class="brand-dot"></span> NEON FRONTIER</div>
+          <div class="hud-stats">
+            <div class="stat"><small>SKOR</small><strong id="score-value">0000</strong></div>
+            <div class="stat"><small>WAKTU</small><strong id="time-value">90</strong></div>
+          </div>
+          <button id="pause-button" class="icon-button" aria-label="Jeda">Ⅱ</button>
+        </div>
+        <div id="status-message" class="status-message">AREA LATIHAN AKTIF</div>
+        <div id="crosshair" aria-hidden="true"><i></i><b></b></div>
+        <div id="hit-marker" class="hit-marker">✦</div>
+        <div id="look-area" aria-label="Geser untuk melihat"></div>
+        <div id="joystick" class="joystick"><div id="joystick-knob" class="joystick-knob"></div></div>
+        <button id="jump-button" class="action-button jump-button">LOMPAT</button>
+        <button id="fire-button" class="action-button fire-button"><span>✦</span><small>PULSE</small></button>
+        <div class="hud-bottom-left">WASD / JOYSTICK <span>•</span> LIHAT / GESER</div>
+      </div>
+
+      <section id="start-screen" class="screen-card">
+        <div class="eyebrow">SIMULASI ARENA • 3D</div>
+        <div class="logo-mark"><span></span><span></span><span></span></div>
+        <h1>NEON<br /><em>FRONTIER</em></h1>
+        <p class="subtitle">DRONE TRAINING PROTOCOL</p>
+        <p class="intro">Masuki arena latihan, bidik drone simulasi, dan kumpulkan skor sebanyak mungkin dalam 90 detik.</p>
+        <div class="feature-row"><span>3D LOW-POLY</span><span>TOUCH CONTROL</span><span>OFFLINE</span></div>
+        <button id="start-button" class="primary-button">MULAI LATIHAN <span>→</span></button>
+        <p class="small-note">Konten fiksi bergaya arcade. Tidak ada senjata atau target nyata.</p>
+      </section>
+
+      <section id="pause-screen" class="screen-card hidden">
+        <div class="eyebrow">SIMULASI DIJEDA</div>
+        <h2>PAUSE</h2>
+        <p class="intro">Latihan sedang dihentikan sementara.</p>
+        <button id="resume-button" class="primary-button">LANJUTKAN</button>
+        <button id="restart-button" class="secondary-button">ULANGI LATIHAN</button>
+      </section>
+
+      <section id="end-screen" class="screen-card hidden">
+        <div class="eyebrow">SESI SELESAI</div>
+        <h2>HASIL LATIHAN</h2>
+        <div class="final-score" id="final-score">0000</div>
+        <p class="intro">Skor akhir simulasi drone training.</p>
+        <button id="play-again-button" class="primary-button">MAIN LAGI <span>→</span></button>
+      </section>
+
+      <div id="rotate-hint" class="rotate-hint hidden">Putar perangkat ke mode landscape untuk pengalaman terbaik.</div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

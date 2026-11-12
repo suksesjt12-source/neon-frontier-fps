@@ -1,0 +1,9 @@
+{
+  "appId": "com.neonfrontier.dronetraining",
+  "appName": "Neon Frontier",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  }
+}
